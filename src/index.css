@@ -7,6 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./images/rick_and_morty.jpg");
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: rgb(30,30,150);
 }
 
 code {
@@ -57,7 +59,7 @@ code {
 .chars-card {
   width: 40%;
   float: left;
-  margin-top: 128px;
+  margin-top: 32px;
 }
 
 .char-name {
@@ -76,7 +78,7 @@ code {
 .info-card {
   width: 60%;
   float: left;
-  margin-top: 128px;
+  margin-top: 32px;
 }
 
 .episodes {
@@ -108,4 +110,8 @@ code {
   border: solid 1px rgb(200,0,50);
   font-size: 32px;
   margin: 16px;
+}
+
+.filters {
+  margin-top: 80px;
 }

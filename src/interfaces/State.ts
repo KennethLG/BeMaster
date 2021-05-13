@@ -2,5 +2,11 @@ export interface State {
   chars: any[];
   show: number;
   charEpisodes: any[];
-  filter: string;
+  filters: {
+    name: string,
+    status: string,
+    species: string,
+    type: string,
+    gender: string
+  }
 }

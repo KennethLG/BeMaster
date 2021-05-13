@@ -8,7 +8,11 @@ export const getCharsAction = (state: any) => {
   }
 }
 
-export const getChars = () => async (dispatch: any) => {
+export const getChars = (filters: any) => async (dispatch: any) => {
+
+  let filtersList: string = "";
+
+
   let chars;
   try {
     const response = await axios.get(`${config.api}/character`);
