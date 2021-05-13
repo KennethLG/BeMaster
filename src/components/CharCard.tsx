@@ -8,14 +8,6 @@ export const CharCard = () => {
   const chars = useSelector((state: State) => state.chars);
   const show = useSelector((state: State) => state.show);
 
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (chars.length === 0) {
-      dispatch(getChars());
-    }
-  });
-
   const applyStyle = (image: string) => {
     const style: React.CSSProperties = {
       backgroundImage: `url(${image})`,
@@ -28,17 +20,14 @@ export const CharCard = () => {
 
   return (
     <div className="chars-card">
-      {
-        chars.length !== 0 &&
-        <div className="card" style={applyStyle(chars[show].image)}>
-          <div className="char-name"> {chars[show].name}</div>
-          <div className="char-property"> <strong> Status : </strong> {chars[show].status} </div>
-          <div className="char-property"> <strong> Specie : </strong> {chars[show].specie} </div>
-          {chars[show].type !== "" &&
-            <div className="char-property"> <strong> Type : </strong> {chars[show].type} </div>}
-          <div className="char-property"> <strong> Gender : </strong> {chars[show].gender} </div>
-        </div>
-      }
+      <div className="card" style={applyStyle(chars[show].image)}>
+        <div className="char-name"> {chars[show].name}</div>
+        <div className="char-property"> <strong> Status : </strong> {chars[show].status} </div>
+        <div className="char-property"> <strong> Specie : </strong> {chars[show].specie} </div>
+        {chars[show].type !== "" &&
+          <div className="char-property"> <strong> Type : </strong> {chars[show].type} </div>}
+        <div className="char-property"> <strong> Gender : </strong> {chars[show].gender} </div>
+      </div>
     </div>
   )
 }

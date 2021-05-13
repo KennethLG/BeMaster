@@ -1,6 +1,9 @@
-const initialState = {
+import { State } from "../interfaces/State";
+
+const initialState: State = {
   chars: [],
-  show: 0
+  show: 0,
+  episodes: []
 }
 
 export const reducer = (state = initialState, action: any) => {
@@ -10,6 +13,12 @@ export const reducer = (state = initialState, action: any) => {
       return {
         ...state,
         chars : action.payload
+      }
+
+    case "GET_EPISODES":
+      return {
+        ...state,
+        episodes: action.payload
       }
 
     default:

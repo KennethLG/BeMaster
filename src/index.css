@@ -78,3 +78,19 @@ code {
   float: left;
   margin-top: 128px;
 }
+
+.episodes {
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.episodes-head {
+  color: rgb(150, 100, 0);
+  background-color: black;
+}
+
+.episode {
+  width: 100%;
+  color: white;
+  background-color: black;
+}

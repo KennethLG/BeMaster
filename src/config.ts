@@ -1,3 +1,3 @@
 export const config = {
-  api: "http://rickandmortyapi.com/api"
+  api: "https://rickandmortyapi.com/api"
 }
