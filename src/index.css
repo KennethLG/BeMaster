@@ -5,9 +5,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./images/rick_and_morty.jpg");
+  background-size: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  height: 100%;
+}
+
+.Bar {
+  width: 100%;
+  height: 64px;
+  background-color: rgba(30,30,30,.8);
+  position: fixed;
+}
+
+.Bar-bemaster {
+  margin-top: 16px;
+  margin-left: 32px;
+}
+
+.Bar-title {
+  width: auto;
+  margin-top: 12px;
+  margin-left: 32px;
+  height: 32px;
+  font-size: 24px;
+}
+
+.Body {
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 32px;
+}
+
+.card {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,1);
+  padding: 16px;
+  border-radius: 0 0 20px 20px white;
+  box-shadow: 0 0 8px 4px rgb(150, 100, 0);
+}
+
+.chars-card {
+  width: 40%;
+  float: left;
+  margin-top: 128px;
+}
+
+.info-card {
+  width: 60%;
+  float: left;
+  margin-top: 128px;
 }
