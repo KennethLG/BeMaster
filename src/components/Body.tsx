@@ -1,19 +1,12 @@
 import React from "react";
+import { CharCard } from "./CharCard";
+import { InfoCard } from "./InfoCard";
 
 export const Body = () => {
   return (
     <div className="Body">
-      <div className="chars-card">
-        <div className="card">
-          Hola
-        </div>
-      </div>
-
-      <div className="info-card">
-        <div className="card">
-          Hola
-        </div>
-      </div>
+      <CharCard />
+      <InfoCard />
     </div>
-  )
+  );
 }
