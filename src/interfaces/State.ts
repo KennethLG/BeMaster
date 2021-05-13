@@ -1,5 +1,6 @@
 export interface State {
   chars: any[];
-  episodes: any[];
   show: number;
+  charEpisodes: any[];
+  filter: string;
 }

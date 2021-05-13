@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getChars, getEpisodes } from "../actions";
+import { getChars, setEpisodesShow } from "../actions";
 import { State } from "../interfaces/State";
 import { CharCard } from "./CharCard";
 import { InfoCard } from "./InfoCard";
@@ -8,7 +8,7 @@ import { InfoCard } from "./InfoCard";
 export const Body = () => {
 
   const chars = useSelector((state: State) => state.chars);
-  const episodes = useSelector((state: State) => state.episodes);
+  const show = useSelector((state: State) => state.show);
 
   const dispatch = useDispatch();
 
@@ -16,10 +16,14 @@ export const Body = () => {
     if (chars.length === 0) {
       dispatch(getChars());
     }
-    if (episodes.length === 0) {
-      dispatch(getEpisodes());
-    }
+    console.log(show);
   });
+
+  useEffect(()=> {
+    if (chars.length !== 0) {
+      dispatch(setEpisodesShow(chars[show].episode));
+    }
+  }, [show]);
 
   return (
     <div className="Body">

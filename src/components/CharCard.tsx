@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getChars } from "../actions";
+import { useSelector } from "react-redux";
 import { State } from "../interfaces/State";
 
 export const CharCard = () => {

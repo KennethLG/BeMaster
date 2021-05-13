@@ -94,3 +94,18 @@ code {
   color: white;
   background-color: black;
 }
+
+.button {
+  background-color: rgb(200,0,50);
+  color: rgb(50,0,10);
+  padding: 16px;
+  border: unset;
+  border-radius: 50%;
+  width: auto;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 5px 5px rgb(200,0,50);
+  border: solid 1px rgb(200,0,50);
+  font-size: 32px;
+  margin: 16px;
+}

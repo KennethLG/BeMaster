@@ -3,7 +3,8 @@ import { State } from "../interfaces/State";
 const initialState: State = {
   chars: [],
   show: 0,
-  episodes: []
+  charEpisodes: [],
+  filter: ""
 }
 
 export const reducer = (state = initialState, action: any) => {
@@ -15,10 +16,22 @@ export const reducer = (state = initialState, action: any) => {
         chars : action.payload
       }
 
-    case "GET_EPISODES":
+    case "SET_CHAR":
       return {
         ...state,
-        episodes: action.payload
+        show : action.payload
+      }
+
+    case "SET_CHAR_EPISODES":
+      return {
+        ...state,
+        charEpisodes: action.payload
+      }
+
+    case "SET_FILTER":
+      return {
+        ...state,
+        filter: action.payload
       }
 
     default:
